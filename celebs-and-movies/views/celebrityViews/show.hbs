@@ -1,0 +1,26 @@
+
+
+    <h1>Welcome To {{celeb.name}}'s Page!</h1>
+
+
+    <h6>
+    occupation: {{celeb.occupation}}
+
+    </h6>
+
+    <p>
+    catchphrase: {{celeb.catchphrase}}
+
+    </p>
+
+    <h3>Movies that {{celeb.name}} has appeared in</h3>
+
+        <ul>
+            {{#each celeb.movies}}
+            <li>{{this.title}}</li>
+            {{/each}}
+        </ul>
+
+        <a href="/celebrities/edit/{{celeb._id}}">
+            <button>Edit This Celebrity</button>
+        </a>
